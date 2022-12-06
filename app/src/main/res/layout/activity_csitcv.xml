@@ -1,0 +1,591 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Csitcv">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/home_bg2"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/suplogo2"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/superiorlogo"/>
+
+    <RelativeLayout
+        android:id="@+id/box2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/suplogo2"
+        android:background="@drawable/roundstyle"
+        android:backgroundTint="#252d44"
+        android:elevation="30dp">
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="Department of CS &amp; IT"
+        android:textSize="30dp"
+        android:elevation="10dp"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text1"
+        android:text="@string/text2"
+        android:textSize="18dp"
+        android:textColor="#BDBDBD"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:justificationMode="inter_word"/>
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/text4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="Degrees Offered"
+        android:textSize="30dp"
+        android:elevation="10dp"
+        android:layout_below="@id/box2"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/box3"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_width="400dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/roundstyle"
+        android:backgroundTint="#252d44"
+        android:layout_below="@+id/text4"
+        android:elevation="30dp">
+
+        <TextView
+            android:id="@+id/text5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:text="BS Computer Science"
+            android:textSize="30dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"/>
+
+        <TableLayout
+            android:id="@+id/table1"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@id/text5">
+
+            <TableRow>
+                <TextView
+                    android:layout_column="1"
+                    android:text="•"
+                    android:textSize="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="#BDBDBD"
+                    android:layout_marginTop="5dp"/>
+                <TextView
+                    android:layout_column="2"
+                    android:layout_width="wrap_content"
+                    android:text="Total Credit Hours: 134"
+                    android:textColor="#BDBDBD"
+                    android:textSize="18dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"/>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_column="1"
+                    android:text="•"
+                    android:textSize="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="#BDBDBD"
+                    android:layout_marginTop="5dp"/>
+                <TextView
+                    android:layout_column="2"
+                    android:layout_width="wrap_content"
+                    android:text="Total Courses: 41"
+                    android:textSize="18dp"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="#BDBDBD"
+                    android:layout_marginTop="5dp"/>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_column="1"
+                    android:text="•"
+                    android:textSize="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="#BDBDBD"
+                    android:layout_marginTop="5dp"/>
+                <TextView
+                    android:layout_column="2"
+                    android:layout_width="wrap_content"
+                    android:text="Total Semesters: 8"
+                    android:textSize="18dp"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="#BDBDBD"
+                    android:layout_marginTop="5dp"/>
+            </TableRow>
+        </TableLayout>
+
+        <TextView
+            android:id="@+id/text6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/table1"
+            android:text="Eglibility"
+            android:textSize="30dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text7"
+            android:layout_below="@id/text6"
+            android:text="Intermediate or Equivalent with Mathematics at least 50% Marks."
+            android:textSize="16dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:textStyle="bold"
+            android:textColor="@color/white"/>
+
+        <Button
+            android:id="@+id/csreg_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text7"
+            android:layout_marginTop="5dp"
+            android:text="Register"
+            android:layout_marginLeft="270dp"
+            android:textColor="@color/white"
+            android:backgroundTint="#6b1f61"
+            app:strokeColor="@color/white"
+            android:elevation="30dp"
+            app:strokeWidth="1dp"
+            app:cornerRadius="10dp"/>
+    </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/box4"
+            android:layout_width="400dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_height="300dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/roundstyle"
+            android:backgroundTint="#252d44"
+            android:orientation="horizontal"
+            android:layout_below="@+id/box3"
+            android:elevation="30dp">
+
+            <TextView
+                android:id="@+id/text8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:text="BS Cyber Security"
+                android:textSize="30dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"/>
+
+            <TableLayout
+                android:id="@+id/table2"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_below="@id/text8">
+
+                <TableRow>
+                    <TextView
+                        android:layout_column="1"
+                        android:text="•"
+                        android:textSize="20dp"
+                        android:textColor="#BDBDBD"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="5dp"/>
+                    <TextView
+                        android:layout_column="2"
+                        android:layout_width="wrap_content"
+                        android:text="Total Credit Hours: 134"
+                        android:textSize="18dp"
+                        android:textColor="#BDBDBD"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"/>
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_column="1"
+                        android:text="•"
+                        android:textColor="#BDBDBD"
+                        android:textSize="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="5dp"/>
+                    <TextView
+                        android:layout_column="2"
+                        android:layout_width="wrap_content"
+                        android:text="Total Courses: 42"
+                        android:textSize="18dp"
+                        android:textColor="#BDBDBD"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"/>
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_column="1"
+                        android:text="•"
+                        android:textSize="20dp"
+                        android:textColor="#BDBDBD"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="5dp"/>
+                    <TextView
+                        android:layout_column="2"
+                        android:layout_width="wrap_content"
+                        android:text="Total Semesters: 8"
+                        android:textSize="18dp"
+                        android:textColor="#BDBDBD"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"/>
+                </TableRow>
+            </TableLayout>
+
+            <TextView
+                android:id="@+id/text9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/table2"
+                android:text="Eglibility"
+                android:textSize="30dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/text10"
+                android:layout_below="@id/text9"
+                android:text="Intermediate or Equivalent with Mathematics at least 50% Marks."
+                android:textSize="16dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:textStyle="bold"
+                android:textColor="@color/white"/>
+
+            <Button
+                android:id="@+id/cyberreg_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text10"
+                android:layout_marginTop="5dp"
+                android:text="Register"
+                android:layout_marginLeft="270dp"
+                android:textColor="@color/white"
+                android:backgroundTint="#6b1f61"
+                app:strokeColor="@color/white"
+                android:elevation="30dp"
+                app:strokeWidth="1dp"
+                app:cornerRadius="10dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/box5"
+            android:layout_width="400dp"
+            android:layout_height="300dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="20dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/roundstyle"
+            android:backgroundTint="#252d44"
+            android:orientation="horizontal"
+            android:layout_below="@+id/box4"
+            android:elevation="30dp">
+
+            <TextView
+                android:id="@+id/text11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:text="BS Artificial Intelligence"
+                android:textSize="30dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"/>
+
+            <TableLayout
+                android:id="@+id/table3"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_below="@id/text11">
+
+                <TableRow>
+                    <TextView
+                        android:layout_column="1"
+                        android:text="•"
+                        android:textSize="20dp"
+                        android:textColor="#BDBDBD"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="5dp"/>
+                    <TextView
+                        android:layout_column="2"
+                        android:layout_width="wrap_content"
+                        android:text="Total Credit Hours: 134"
+                        android:textSize="18dp"
+                        android:textColor="#BDBDBD"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"/>
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_column="1"
+                        android:text="•"
+                        android:textColor="#BDBDBD"
+                        android:textSize="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="5dp"/>
+                    <TextView
+                        android:layout_column="2"
+                        android:layout_width="wrap_content"
+                        android:text="Total Courses: 41"
+                        android:textSize="18dp"
+                        android:textColor="#BDBDBD"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"/>
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_column="1"
+                        android:text="•"
+                        android:textSize="20dp"
+                        android:textColor="#BDBDBD"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="5dp"/>
+                    <TextView
+                        android:layout_column="2"
+                        android:layout_width="wrap_content"
+                        android:text="Total Semesters: 8"
+                        android:textSize="18dp"
+                        android:textColor="#BDBDBD"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"/>
+                </TableRow>
+            </TableLayout>
+
+            <TextView
+                android:id="@+id/text12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/table3"
+                android:text="Eglibility"
+                android:textSize="30dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/text13"
+                android:layout_below="@id/text12"
+                android:text="Intermediate or Equivalent with Mathematics at least 50% Marks."
+                android:textSize="16dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:textStyle="bold"
+                android:textColor="@color/white"/>
+
+            <Button
+                android:id="@+id/aireg_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text13"
+                android:layout_marginTop="5dp"
+                android:text="Register"
+                android:layout_marginLeft="270dp"
+                android:textColor="@color/white"
+                android:backgroundTint="#6b1f61"
+                app:strokeColor="@color/white"
+                android:elevation="30dp"
+                app:strokeWidth="1dp"
+                app:cornerRadius="10dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/box6"
+            android:layout_width="400dp"
+            android:layout_height="300dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="20dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/roundstyle"
+            android:backgroundTint="#252d44"
+            android:orientation="horizontal"
+            android:layout_below="@+id/box5"
+            android:elevation="30dp">
+
+            <TextView
+                android:id="@+id/text14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:text="BS Info Technology"
+                android:textSize="30dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"/>
+
+            <TableLayout
+                android:id="@+id/table4"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_below="@id/text14">
+
+                <TableRow>
+                    <TextView
+                        android:layout_column="1"
+                        android:text="•"
+                        android:textColor="#BDBDBD"
+                        android:textSize="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="5dp"/>
+                    <TextView
+                        android:layout_column="2"
+                        android:textColor="#BDBDBD"
+                        android:layout_width="wrap_content"
+                        android:text="Total Credit Hours: 134"
+                        android:textSize="18dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"/>
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_column="1"
+                        android:text="•"
+                        android:textSize="20dp"
+                        android:textColor="#BDBDBD"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="5dp"/>
+                    <TextView
+                        android:layout_column="2"
+                        android:layout_width="wrap_content"
+                        android:text="Total Courses: 41"
+                        android:textSize="18dp"
+                        android:textColor="#BDBDBD"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"/>
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_column="1"
+                        android:text="•"
+                        android:textSize="20dp"
+                        android:textColor="#BDBDBD"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="5dp"/>
+                    <TextView
+                        android:layout_column="2"
+                        android:layout_width="wrap_content"
+                        android:text="Total Semesters: 8"
+                        android:textSize="18dp"
+                        android:textColor="#BDBDBD"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"/>
+                </TableRow>
+            </TableLayout>
+
+            <TextView
+                android:id="@+id/text15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/table4"
+                android:text="Eglibility"
+                android:textSize="30dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/text16"
+                android:layout_below="@id/text15"
+                android:text="Intermediate or Equivalent with Mathematics at least 50% Marks."
+                android:textSize="16dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:textStyle="bold"
+                android:textColor="@color/white"/>
+
+            <Button
+                android:id="@+id/itreg_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text16"
+                android:layout_marginTop="5dp"
+                android:text="Register"
+                android:layout_marginLeft="270dp"
+                android:textColor="@color/white"
+                android:backgroundTint="#6b1f61"
+                app:strokeColor="@color/white"
+                android:elevation="30dp"
+                app:strokeWidth="1dp"
+                app:cornerRadius="10dp"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

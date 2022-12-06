@@ -1,0 +1,80 @@
+{
+  "project_info": {
+    "project_number": "195261760883",
+    "firebase_url": "https://registration-app-c8252-default-rtdb.firebaseio.com",
+    "project_id": "registration-app-c8252",
+    "storage_bucket": "registration-app-c8252.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:195261760883:android:474221e844606b17bbf106",
+        "android_client_info": {
+          "package_name": "com.example.superior_admissions"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "195261760883-a0chdfe7okv8kg57ccgr4pqvf1pqj6lj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.superior_admissions",
+            "certificate_hash": "0201c141a49def637be17a5650a52434b5946ac5"
+          }
+        },
+        {
+          "client_id": "195261760883-ara2kkgn06m0arl13b72hvcsqpfi1s66.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.superior_admissions",
+            "certificate_hash": "fa1acc053f4032c553e73a77655a1d668b865588"
+          }
+        },
+        {
+          "client_id": "195261760883-rnqggt5k4r9lmb3b19oq1er6e0tin4vq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.superior_admissions",
+            "certificate_hash": "6597426743f1a0198a6189d59c98b26ec26c9116"
+          }
+        },
+        {
+          "client_id": "195261760883-t2l9v5kl0jr2fn5shs3a41hu5802dktm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.superior_admissions",
+            "certificate_hash": "e29a7977f711bf03ef6e9129608fd95362bc6fde"
+          }
+        },
+        {
+          "client_id": "195261760883-ude1ti8kqtiu930cuee6p2igdoc02kpo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.superior_admissions",
+            "certificate_hash": "dec3255f8924d478804bed05c3d96bc5cc3bba82"
+          }
+        },
+        {
+          "client_id": "195261760883-9sfntbam6hpvumojtoa9r9dgqhoctmfe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBzwOAhCk_LD73Q1j51oQBBiITuyF4tUrg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "195261760883-9sfntbam6hpvumojtoa9r9dgqhoctmfe.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

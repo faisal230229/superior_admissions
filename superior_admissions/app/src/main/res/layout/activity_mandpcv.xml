@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Csitcv">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/home_bg2"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/suplogo2"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/superiorlogo"/>
+
+            <RelativeLayout
+                android:id="@+id/box2"
+                android:layout_width="400dp"
+                android:layout_height="385dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/suplogo2"
+                android:background="@drawable/roundstyle"
+                android:backgroundTint="#281e40"
+                android:orientation="horizontal"
+                android:elevation="30dp">
+
+                <TextView
+                    android:id="@+id/text1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:text="Department of Gaming &amp; Multimedia"
+                    android:gravity="center"
+                    android:textSize="30dp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/text2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text1"
+                    android:text="@string/text5"
+                    android:textSize="18dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="5dp"
+                    android:paddingBottom="10dp"
+                    android:justificationMode="inter_word"/>
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/text4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:text="Degrees Offered"
+                android:textSize="30dp"
+                android:elevation="10dp"
+                android:layout_below="@id/box2"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/box3"
+                android:layout_width="400dp"
+                android:layout_height="330dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/roundstyle"
+                android:backgroundTint="#281e40"
+                android:orientation="horizontal"
+                android:layout_below="@+id/text4"
+                android:elevation="30dp">
+
+                <TextView
+                    android:id="@+id/text5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:text="BS Gaming &amp; Multimedia"
+                    android:textSize="30dp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"/>
+
+                <TableLayout
+                    android:id="@+id/table1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@id/text5">
+
+                    <TableRow>
+                        <TextView
+                            android:layout_column="1"
+                            android:text="•"
+                            android:textSize="20dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="5dp"/>
+                        <TextView
+                            android:layout_column="2"
+                            android:layout_width="wrap_content"
+                            android:text="Total Credit Hours: 131"
+                            android:textSize="18dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"/>
+                    </TableRow>
+                    <TableRow>
+                        <TextView
+                            android:layout_column="1"
+                            android:text="•"
+                            android:textSize="20dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="5dp"/>
+                        <TextView
+                            android:layout_column="2"
+                            android:layout_width="wrap_content"
+                            android:text="Total Courses: 42"
+                            android:textSize="18dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"/>
+                    </TableRow>
+                    <TableRow>
+                        <TextView
+                            android:layout_column="1"
+                            android:text="•"
+                            android:textSize="20dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="5dp"/>
+                        <TextView
+                            android:layout_column="2"
+                            android:layout_width="wrap_content"
+                            android:text="Total Semesters: 8"
+                            android:textSize="18dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"/>
+                    </TableRow>
+                </TableLayout>
+
+                <TextView
+                    android:id="@+id/text6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@id/table1"
+                    android:text="Eglibility"
+                    android:textSize="30dp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/text7"
+                    android:layout_below="@id/text6"
+                    android:text="Intermediate or Equivalent with Mathematics at least 45% Marks."
+                    android:textSize="18dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"/>
+
+                <Button
+                    android:id="@+id/gamingreg_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text7"
+                    android:layout_marginTop="5dp"
+                    android:text="Register"
+                    android:layout_marginLeft="240dp"
+                    android:textColor="@color/white"
+                    android:backgroundTint="#6b1f61"
+                    app:strokeColor="@color/white"
+                    android:elevation="30dp"
+                    app:strokeWidth="1dp"
+                    app:cornerRadius="10dp"/>
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
