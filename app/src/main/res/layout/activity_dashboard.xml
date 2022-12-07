@@ -121,7 +121,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Department of CS &amp; IT"
+                            android:text="Department of CS"
                             android:textStyle="bold"
                             android:layout_marginTop="20dp"
                             android:textSize="18dp"
@@ -130,7 +130,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Learn about the CS and IT department here"
+                            android:text="Learn about the Computer Science department here"
                             android:layout_marginTop="5dp"
                             android:textColor="@color/black"
                             />
@@ -225,7 +225,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Department of Math &amp; Physics"
+                            android:text="Department of Information Technology"
                             android:textStyle="bold"
                             android:layout_marginTop="15dp"
                             android:textSize="18dp"
@@ -234,7 +234,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Learn about the department of Math and Physics here"
+                            android:text="Learn about the department of Information Technology here"
                             android:layout_marginTop="5dp"
                             android:layout_marginRight="10dp"
                             android:textColor="@color/black"

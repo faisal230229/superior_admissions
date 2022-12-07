@@ -2,6 +2,7 @@ package com.example.superior_admissions;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.icu.text.SymbolTable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -27,7 +28,8 @@ public class Subjects extends AppCompatActivity {
     SubjectAdapter subjectAdapter;
     ArrayList<SubjectModel> list;
     String value = "";
-    String name = "", fcnic = "", email = "", degree = "";
+    String cnic = "", degree = "";
+    Integer totalCredit = 0;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -41,13 +43,10 @@ public class Subjects extends AppCompatActivity {
         Intent intent = getIntent();
         value = intent.getStringExtra("department");
 
-        name = intent.getStringExtra("name");
-        fcnic = intent.getStringExtra("fcnic");
-        email = intent.getStringExtra("email");
+        cnic = intent.getStringExtra("cnic");
         degree = intent.getStringExtra("degree");
 
         database = FirebaseDatabase.getInstance().getReference("csSubjects");
-        System.out.println(value);
         if (value.equals("it")) {
             database = FirebaseDatabase.getInstance().getReference("itSubjects");
         }
@@ -71,6 +70,9 @@ public class Subjects extends AppCompatActivity {
         subjectAdapter = new SubjectAdapter(this,list);
         recyclerView.setAdapter(subjectAdapter);
 
+        Intent i = new Intent(Subjects.this, Fee_challan.class);
+
+
         database.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -78,9 +80,13 @@ public class Subjects extends AppCompatActivity {
                     SubjectModel subject = dataSnapshot.getValue(SubjectModel.class);
                     list.add(subject);
                 }
+                for (int i = 0; i < list.size(); i++){
+                    totalCredit = totalCredit + list.get(i).sbjCredit;
+
+                }
+                i.putExtra("credits", totalCredit);
                 subjectAdapter.notifyDataSetChanged();
             }
-
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
 
@@ -90,10 +96,7 @@ public class Subjects extends AppCompatActivity {
         feebtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(Subjects.this, Fee_challan.class);
-                i.putExtra("name", name);
-                i.putExtra("fcnic", fcnic);
-                i.putExtra("email", email);
+                i.putExtra("cnic", cnic);
                 i.putExtra("degree", degree);
                 startActivity(i);
             }

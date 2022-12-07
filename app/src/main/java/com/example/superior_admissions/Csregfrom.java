@@ -136,9 +136,7 @@ public class Csregfrom extends AppCompatActivity {
 
                             Toast.makeText(Csregfrom.this,"Successfuly Registered",Toast.LENGTH_SHORT).show();
                             Intent intent = new Intent(Csregfrom.this, Subjects.class);
-                            intent.putExtra("name", Name);
-                            intent.putExtra("fcnic", fcnic);
-                            intent.putExtra("email", email);
+                            intent.putExtra("cnic", cnic1);
                             intent.putExtra("degree", selectedprog.getText());
 
                             if (selectedprog.getText().equals("BS Computer Science")){

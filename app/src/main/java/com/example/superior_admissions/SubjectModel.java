@@ -4,6 +4,7 @@ public class SubjectModel {
     String sbjName, sbjDesc;
     Integer sbjCredit;
 
+
     public String getSbjName() {
         return sbjName;
     }
@@ -15,4 +16,6 @@ public class SubjectModel {
     public Integer getSbjCredit() {
         return sbjCredit;
     }
+
+
 }

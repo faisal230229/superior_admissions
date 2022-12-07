@@ -26,10 +26,16 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.itextpdf.text.Document;
 import com.itextpdf.text.Image;
 import com.itextpdf.text.pdf.PdfWriter;
@@ -43,13 +49,17 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Fee_challan extends AppCompatActivity {
     String fName = String.valueOf(System.currentTimeMillis());
 
     TextView nameTxt, fcnicTxt, emailTxt, degreeTxt;
-    String name = "", fcnic = "", email = "", degree = "";
+    String cnic = "", degree = "";
+    Integer totalCredit, amount;
+    String program;
+
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -69,13 +79,57 @@ public class Fee_challan extends AppCompatActivity {
 
         Intent intent = getIntent();
 
-        name = intent.getStringExtra("name");
-        fcnic = intent.getStringExtra("fcnic");
+        cnic = intent.getStringExtra("cnic");
         degree = intent.getStringExtra("degree");
+        totalCredit = intent.getIntExtra("credits", 0);
 
-        nameTxt.setText(name);
-        fcnicTxt.setText(fcnic);
         degreeTxt.setText(degree);
+
+
+
+        DatabaseReference database = FirebaseDatabase.getInstance().getReference().child("Student20").child(cnic);
+
+        database.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                ChallanModel challan = snapshot.getValue(ChallanModel.class);
+                program = challan.getProgram();
+                nameTxt.setText(challan.getName());
+
+                System.out.println(challan.getProgram());
+                System.out.println(totalCredit);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+        if (program.equals("BS Computer Science")){
+            amount = totalCredit * 9600;
+        }
+        if (program.equals("BS Information Technology")){
+            amount = totalCredit * 8300;
+        }
+        if (program.equals("BS Software Engineering")){
+            amount = totalCredit * 8500;
+        }
+        if (program.equals("BS Artificial Intelligence") || program.equals("BS Data Science") || program.equals("BS Cyber Security")){
+            amount = totalCredit * 8100;
+        }
+        if (program.equals("BS Gaming and Multimedia")){
+            amount = totalCredit * 8200;
+        }
+        if (program.equals("BS Internet of Things")){
+            amount = totalCredit * 7900;
+        }
+        if (program.equals("BS Robotics")){
+            amount = totalCredit * 7800;
+        }
+
+//        amountTxt.setText(amount);
+
 
         StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
         StrictMode.setVmPolicy(builder.build());
@@ -83,10 +137,6 @@ public class Fee_challan extends AppCompatActivity {
         findViewById(R.id.createBtn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-
-//                layoutToImage();
-
                 layoutTOimageConverter();
             }
         });

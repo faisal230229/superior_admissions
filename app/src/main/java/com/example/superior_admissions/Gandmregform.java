@@ -128,9 +128,7 @@ public class Gandmregform extends AppCompatActivity {
 
                             Toast.makeText(Gandmregform.this,"Successfuly Registered",Toast.LENGTH_SHORT).show();
                             Intent intent = new Intent(Gandmregform.this, Subjects.class);
-                            intent.putExtra("name", Name);
-                            intent.putExtra("fcnic", fcnic);
-                            intent.putExtra("email", email);
+                            intent.putExtra("cnic", cnic1);
                             intent.putExtra("degree", selectedprog.getText());
                             if (selectedprog.getText().equals("BS Gaming and Multimedia")){
                                 intent.putExtra("department", "gm");
