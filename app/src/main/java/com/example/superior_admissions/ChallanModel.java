@@ -1,7 +1,7 @@
 package com.example.superior_admissions;
 
 public class ChallanModel {
-    String name, program, fcnic, mobile;
+    String name, program, fname, fee;
 
 
     public String getName() {
@@ -12,11 +12,11 @@ public class ChallanModel {
         return program;
     }
 
-    public String getFcnic() {
-        return fcnic;
+    public String getFname() {
+        return fname;
     }
 
-    public String getMobile() {
-        return mobile;
+    public String getFee() {
+        return fee;
     }
 }

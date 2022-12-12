@@ -98,7 +98,7 @@
         android:textSize="8dp" />
 
     <TextView
-        android:id="@+id/fcnic"
+        android:id="@+id/fname"
         android:layout_width="95dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"

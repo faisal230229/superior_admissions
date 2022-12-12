@@ -55,7 +55,20 @@
 
 
 
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_height="wrap_content"
+                app:errorEnabled="true">
 
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/fname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Father Name"
+                    android:inputType="textPersonName"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
 
 
             <com.google.android.material.textfield.TextInputLayout
@@ -178,35 +191,103 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="College Name:"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"/>
+
+                <RadioGroup
+                    android:id="@+id/college"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/sup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="16dp"
+                        android:text="Superior College"/>
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/other"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:layout_marginLeft="50dp"
+                        android:textSize="16dp"
+                        android:text="Other"/>
+
+
+                </RadioGroup>
+            </LinearLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:errorEnabled="true"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/registeration"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter Registeration Number"
+                    android:inputType="text"
+
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Degree Name:"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"/>
 
                 <RadioGroup
                     android:id="@+id/radioClass"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal" >
 
                     <androidx.appcompat.widget.AppCompatRadioButton
-                        android:layout_width="100dp"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/white"
-                        android:text="FSC"
                         android:id="@+id/intdegree"
-                        />
-
-                    <androidx.appcompat.widget.AppCompatRadioButton
-                        android:layout_width="100dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/white"
-                        android:text="ICS"
+                        android:textSize="16dp"
+                        android:text="FSC"/>
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
                         android:id="@+id/intdegree2"
-                        />
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:layout_marginLeft="130dp"
+                        android:textSize="16dp"
+                        android:text="ICS"/>
+
+
                 </RadioGroup>
 
-
-
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

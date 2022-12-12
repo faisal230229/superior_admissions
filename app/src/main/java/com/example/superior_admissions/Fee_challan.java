@@ -55,10 +55,9 @@ import java.util.List;
 public class Fee_challan extends AppCompatActivity {
     String fName = String.valueOf(System.currentTimeMillis());
 
-    TextView nameTxt, fcnicTxt, emailTxt, degreeTxt;
+    TextView nameTxt, fname, degreeTxt, feesTxt;
     String cnic = "", degree = "";
-    Integer totalCredit, amount;
-    String program;
+    String program = "";
 
 
     @SuppressLint("MissingInflatedId")
@@ -74,14 +73,15 @@ public class Fee_challan extends AppCompatActivity {
         }
 
         nameTxt = findViewById(R.id.name);
-        fcnicTxt = findViewById(R.id.fcnic);
+        fname = findViewById(R.id.fname);
         degreeTxt = findViewById(R.id.degree);
+//        feesTxt = findViewById(R.id.fees);
+
 
         Intent intent = getIntent();
 
         cnic = intent.getStringExtra("cnic");
         degree = intent.getStringExtra("degree");
-        totalCredit = intent.getIntExtra("credits", 0);
 
         degreeTxt.setText(degree);
 
@@ -95,9 +95,10 @@ public class Fee_challan extends AppCompatActivity {
                 ChallanModel challan = snapshot.getValue(ChallanModel.class);
                 program = challan.getProgram();
                 nameTxt.setText(challan.getName());
+//                feesTxt.setText(challan.getFee());
+                fname.setText(challan.getFname());
 
                 System.out.println(challan.getProgram());
-                System.out.println(totalCredit);
             }
 
             @Override
@@ -106,27 +107,27 @@ public class Fee_challan extends AppCompatActivity {
             }
         });
 
-        if (program.equals("BS Computer Science")){
-            amount = totalCredit * 9600;
-        }
-        if (program.equals("BS Information Technology")){
-            amount = totalCredit * 8300;
-        }
-        if (program.equals("BS Software Engineering")){
-            amount = totalCredit * 8500;
-        }
-        if (program.equals("BS Artificial Intelligence") || program.equals("BS Data Science") || program.equals("BS Cyber Security")){
-            amount = totalCredit * 8100;
-        }
-        if (program.equals("BS Gaming and Multimedia")){
-            amount = totalCredit * 8200;
-        }
-        if (program.equals("BS Internet of Things")){
-            amount = totalCredit * 7900;
-        }
-        if (program.equals("BS Robotics")){
-            amount = totalCredit * 7800;
-        }
+//        if (program.equals("BS Computer Science")){
+//            amount = totalCredit * 9600;
+//        }
+//        if (program.equals("BS Information Technology")){
+//            amount = totalCredit * 8300;
+//        }
+//        if (program.equals("BS Software Engineering")){
+//            amount = totalCredit * 8500;
+//        }
+//        if (program.equals("BS Artificial Intelligence") || program.equals("BS Data Science") || program.equals("BS Cyber Security")){
+//            amount = totalCredit * 8100;
+//        }
+//        if (program.equals("BS Gaming and Multimedia")){
+//            amount = totalCredit * 8200;
+//        }
+//        if (program.equals("BS Internet of Things")){
+//            amount = totalCredit * 7900;
+//        }
+//        if (program.equals("BS Robotics")){
+//            amount = totalCredit * 7800;
+//        }
 
 //        amountTxt.setText(amount);
 

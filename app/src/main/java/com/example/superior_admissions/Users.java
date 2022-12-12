@@ -1,14 +1,11 @@
 package com.example.superior_admissions;
 
 public class Users {
-    String Name, email, mobile, cic,fcic,matric2,inter2,selectDegree, pas, program;
+    String Name,fname, email, mobile, cic,fcic,matric2,inter2,selectDegree, pas, program, college, regis, fee;
 
-    public Users() {
-    }
-
-
-    public Users(String name, String email, String mobile, String cic, String fcic, String matric2, String inter2, String selectDegree, String pas, String program) {
+    public Users(String name, String fname, String email, String mobile, String cic, String fcic, String matric2, String inter2, String selectDegree, String pas, String program, String college, String regis, String fee) {
         Name = name;
+        this.fname = fname;
         this.email = email;
         this.mobile = mobile;
         this.cic = cic;
@@ -18,6 +15,9 @@ public class Users {
         this.selectDegree = selectDegree;
         this.pas = pas;
         this.program = program;
+        this.college = college;
+        this.regis = regis;
+        this.fee = fee;
     }
 
     public String getName() {
@@ -26,6 +26,14 @@ public class Users {
 
     public void setName(String name) {
         Name = name;
+    }
+
+    public String getFname() {
+        return fname;
+    }
+
+    public void setFname(String fname) {
+        this.fname = fname;
     }
 
     public String getEmail() {
@@ -98,5 +106,27 @@ public class Users {
 
     public void setProgram(String program) {
         this.program = program;
+    }
+
+    public String getCollege() {
+        return college;
+    }
+
+    public void setCollege(String college) {
+        this.college = college;
+    }
+
+    public String getRegis() {
+        return regis;
+    }
+
+    public void setRegis(String regis) {
+        this.regis = regis;
+    }
+
+    public  String  getFee(){ return  fee; }
+
+    public void setFee(String fee) {
+        this.fee = fee;
     }
 }

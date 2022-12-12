@@ -19,17 +19,19 @@ import com.google.firebase.database.FirebaseDatabase;
 public class Gandmregform extends AppCompatActivity {
 
     ActivityGandmregformBinding binding;
-    String Name, email,g, Mobile_num,cnic1,fcnic,mat,inte,d1,d2, pass;
-
-    RadioButton degree1, degree2, program;
+    String Name,Fname, email, Mobile_num,cnic1,fcnic,mat,inte,d1,d2, pass, register;
+    long subfee = 139400, collfee =1, markfee=1, semfee, fee;
+    int adfee = 20000, mischarge = 7500;
+    float per, percent, d25=25/100, d30 = 30/100, d40 = 40/100, d50=50/100;
+    RadioButton degree1, degree2, sup, other;
 
     FirebaseDatabase db;
     DatabaseReference reference;
-    RadioGroup radioClass, programclass;
+    RadioGroup radioClass, programclass, college;
 
-    RadioButton selectedBtn, selectedprog;
+    RadioButton selectedBtn, selectedprog, selectclg;
 
-    TextInputEditText name, eml, pswd, mob, cnic, cnic2, matmarks, intmarks;
+    TextInputEditText name,fname, eml, pswd, mob, cnic, cnic2, matmarks, intmarks, regist;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,9 +42,13 @@ public class Gandmregform extends AppCompatActivity {
         setContentView(binding.getRoot());
         degree1 = findViewById(R.id.intdegree);
         degree2 = findViewById(R.id.intdegree2);
+        sup = findViewById (R.id.sup);
+        other = findViewById (R.id.other);
         radioClass = findViewById(R.id.radioClass);
+        college = findViewById (R.id.college);
         programclass = findViewById(R.id.programclass);
         name = findViewById(R.id.userName);
+        fname = findViewById (R.id.fname);
         eml = findViewById(R.id.Email);
         pswd = findViewById(R.id.password);
         mob = findViewById(R.id.Mobileno);
@@ -50,12 +56,14 @@ public class Gandmregform extends AppCompatActivity {
         cnic2 = findViewById(R.id.fcnc);
         matmarks = findViewById(R.id.matric1);
         intmarks = findViewById(R.id.inter1);
+        regist = findViewById (R.id.registeration);
 
         binding.registerBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 Name = binding.userName.getText().toString();
+                Fname = binding.fname.getText ().toString ();
                 email = binding.Email.getText().toString();
                 Mobile_num = binding.Mobileno.getText().toString();
                 cnic1 = binding.cnic.getText().toString();
@@ -63,14 +71,50 @@ public class Gandmregform extends AppCompatActivity {
                 mat = binding.matric1.getText().toString();
                 inte = binding.inter1.getText().toString();
                 pass = binding.password.getText().toString();
+                register = binding.registeration.getText ().toString ();
 
                 int selectedId = radioClass.getCheckedRadioButtonId();
                 int selectedid = programclass.getCheckedRadioButtonId();
+                int select = college.getCheckedRadioButtonId ();
                 // find the radiobutton by returned id
                 selectedBtn = (RadioButton) findViewById(selectedId);
                 selectedprog = findViewById(selectedid);
+                selectclg = findViewById (select);
 
-                Users user = new Users(Name,email,Mobile_num,cnic1,fcnic,mat,inte,selectedBtn.getText().toString(),pass,selectedprog.getText().toString() );
+                per = (Integer.parseInt (inte)) * 100;
+                percent = per/1100;
+
+                if(sup.isChecked ())
+                {
+                    collfee = subfee/2;
+                }
+                if(percent>=70 && percent<=75){
+                    markfee = (long) (subfee * d25);
+                }
+                else if(percent>=75 && percent<=80)
+                {
+                    markfee = (long) (subfee * d30);
+                }
+                else if(percent>=80 && percent<=85)
+                {
+                    markfee = (long) (subfee * d40);
+                }
+                else if(percent>=85 && percent<=90)
+                {
+                    markfee = (long) (subfee * d50);
+                }
+
+                if(collfee>=markfee){
+                    semfee = collfee;
+                }
+                else if(markfee>collfee){
+                    semfee = markfee;
+                }
+
+
+                fee = semfee + adfee + mischarge;
+
+                Users user = new Users(Name,Fname,email,Mobile_num,cnic1,fcnic,mat,inte,selectedBtn.getText ().toString (),pass,selectedprog.getText().toString(),selectclg.getText().toString(),register, String.valueOf(fee));
 
                 if (binding.userName.getText().toString().isEmpty()){
                     binding.userName.setError("Name cannot be empty!");
@@ -125,6 +169,7 @@ public class Gandmregform extends AppCompatActivity {
                             binding.matric1.setText("");
                             binding.inter1.setText("");
                             binding.password.setText("");
+
 
                             Toast.makeText(Gandmregform.this,"Successfuly Registered",Toast.LENGTH_SHORT).show();
                             Intent intent = new Intent(Gandmregform.this, Subjects.class);
