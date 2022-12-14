@@ -114,6 +114,7 @@
         android:textSize="8dp" />
 
     <TextView
+        android:id="@+id/amount"
         android:layout_width="63dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -124,7 +125,6 @@
         android:layout_marginTop="220dp"
         android:layout_marginEnd="301dp"
         android:layout_marginBottom="500dp"
-        android:text="64,418"
         android:textColor="#212121"
         android:textSize="8dp" />
 

@@ -75,7 +75,7 @@ public class Fee_challan extends AppCompatActivity {
         nameTxt = findViewById(R.id.name);
         fname = findViewById(R.id.fname);
         degreeTxt = findViewById(R.id.degree);
-//        feesTxt = findViewById(R.id.fees);
+        feesTxt = findViewById(R.id.amount);
 
 
         Intent intent = getIntent();
@@ -95,10 +95,10 @@ public class Fee_challan extends AppCompatActivity {
                 ChallanModel challan = snapshot.getValue(ChallanModel.class);
                 program = challan.getProgram();
                 nameTxt.setText(challan.getName());
-//                feesTxt.setText(challan.getFee());
+                feesTxt.setText(challan.getFee());
                 fname.setText(challan.getFname());
 
-                System.out.println(challan.getProgram());
+                System.out.println(challan.getFee());
             }
 
             @Override

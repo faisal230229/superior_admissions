@@ -98,6 +98,9 @@ public class Seregform extends AppCompatActivity {
                 {
                     collfee = subfee/2;
                 }
+                else if(other.isChecked()){
+                    collfee = subfee;
+                }
                 if(percent>=70 && percent<=75){
                     markfee = (long) (subfee * d25);
                 }
@@ -115,14 +118,18 @@ public class Seregform extends AppCompatActivity {
                 }
 
                 if(collfee>=markfee){
-                    semfee = collfee;
-                }
-                else if(markfee>collfee){
                     semfee = markfee;
                 }
+                else if(markfee>collfee){
+                    semfee = collfee;
+                }
+
 
 
                 fee = semfee + adfee + mischarge;
+
+                System.out.println(fee);
+
 
                 Users user = new Users(Name,Fname,email,Mobile_num,cnic1,fcnic,mat,inte,selectedBtn.getText ().toString (), pass,selectedprog.getText().toString(),selectclg.getText().toString(),register , String.valueOf(fee));
 

@@ -88,6 +88,9 @@ public class Gandmregform extends AppCompatActivity {
                 {
                     collfee = subfee/2;
                 }
+                else if(other.isChecked()){
+                    collfee = subfee;
+                }
                 if(percent>=70 && percent<=75){
                     markfee = (long) (subfee * d25);
                 }
